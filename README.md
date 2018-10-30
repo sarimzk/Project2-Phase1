@@ -1,4 +1,4 @@
-# Project 2: Phase 1
+# Web Based Python Compiler using Docker
 
 A simple web-based python compiler that takes python code as input and runs it in a background docker container, then displays the output on the web-interface. 
 
