@@ -68,7 +68,7 @@
             form {
                 margin-left: 0px;
                 margin-right: 0px;
-                padding-top: 30px;
+                padding-top: 20px;
                 background-color: #40454f;
             }
 
@@ -93,9 +93,11 @@
                 width: 100%;
                 height: 100%;
                 background-color: #25272b;
-                padding: 20px 20px;
+                padding-left: 20px;
+                padding-right: 20px;
+                padding top: 5px;
+                padding-bottom: 20px;
                 box-sizing: border-box;
-                margin-top: 20px;
                 font-size: 24px;
                 margin-bottom: 10px;
                 color: #33cc33;
@@ -106,13 +108,26 @@
             }
 
             .output-heading{
+                width: 100%;
+                background-color: #25272b;
+                padding-left: 20px;
+                padding-right: 20px;
+                padding top: 20px;
+                padding-bottom: 5px;
+                box-sizing: border-box;
                 font-size: 18px;
                 color: white;
-                margin-bottom: 20px;
+                font-family: arial;
+                border: 1px #25272b;
+                margin-top: 20px;
             }
 
             form {
                 text-align: center;
+            }
+
+            body {
+                background-color: #25272b;
             }
         </style>
     </head>
@@ -147,7 +162,14 @@
 
             }
         ?>
-        <div class="output"><span class="output-heading">Output: </span><br> <?php if(isset($_POST['submit'])){ echo file_get_contents("console.log");} ?> </div>
+        <div class="output-heading">
+            Output:
+        </div>
+        <div class="output">
+            <?php 
+                if(isset($_POST['submit'])){ echo file_get_contents("console.log");} 
+            ?>
+        </div>
 
     </body>
 </html>
